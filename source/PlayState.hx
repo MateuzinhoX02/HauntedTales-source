@@ -1492,7 +1492,6 @@ class PlayState extends MusicBeatState
 			startAndEnd();
 			return;
 		}
-		if(buildpc) {
 		var video:MP4Handler = new MP4Handler();
 		video.playVideo(filepath);
 		video.finishCallback = function()
@@ -1500,9 +1499,6 @@ class PlayState extends MusicBeatState
 			startAndEnd();
 			return;
 		}
-	} else {
-		MusicBeatState.switchState(new WebviewHandler(filepath, new PlayState()));
-	}
 	}
 
 	function startAndEnd()
