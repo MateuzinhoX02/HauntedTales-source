@@ -300,6 +300,8 @@ class PlayState extends MusicBeatState
 
 	var precacheList:Map<String, String> = new Map<String, String>();
 
+	public static var buildpc:Bool = true; // Caso for a build de mobile, desativa xd
+
 	override public function create()
 	{
 		Paths.clearStoredMemory();
@@ -1478,13 +1480,12 @@ class PlayState extends MusicBeatState
 
 	public function startVideo(name:String)
 	{
-		#if VIDEOS_ALLOWED
+
 		inCutscene = true;
 
 		var filepath:String = Paths.video(name);
-		#if sys
-		if(!FileSystem.exists(filepath))
-		#else
+
+		
 		if(!OpenFlAssets.exists(filepath))
 		#end
 		{
@@ -1492,7 +1493,7 @@ class PlayState extends MusicBeatState
 			startAndEnd();
 			return;
 		}
-
+		if(buildpc) {
 		var video:MP4Handler = new MP4Handler();
 		video.playVideo(filepath);
 		video.finishCallback = function()
@@ -1500,11 +1501,9 @@ class PlayState extends MusicBeatState
 			startAndEnd();
 			return;
 		}
-		#else
-		FlxG.log.warn('Platform not supported!');
-		startAndEnd();
-		return;
-		#end
+	} else {
+		MusicBeatState.switchState(new WebviewHandler(filepath, new PlayState()));
+	}
 	}
 
 	function startAndEnd()

@@ -77,7 +77,7 @@
 		<library name="shared"        preload="false" />
 	</section>
 	
-	<assets path="assets/videos"        library="videos"        if="VIDEOS_ALLOWED"/>
+	<assets path="assets/videos"        library="videos"        />
 	<assets path="assets/songs"         library="songs"         exclude="*.ogg" if="web"/>
 	<assets path="assets/songs"         library="songs"         exclude="*.mp3" unless="web"/>
 	<assets path="assets/shared"        library="shared"        exclude="*.ogg" if="web"/>
@@ -102,7 +102,8 @@
 	<!--In case you want to use the ui package-->
 	<haxelib name="flixel-ui" />
 	<haxelib name="linc_luajit" if="LUA_ALLOWED"/>
-	<haxelib name="hxCodec" if="VIDEOS_ALLOWED"/>
+	<haxelib name="hxCodec" if="desktop"/>
+	<haxelib name="extension-webview" if="mobile"/>
 	<haxelib name="faxe" if='switch'/>
 	<!--<haxelib name="polymod"/> -->
 	<haxelib name="discord_rpc" if="desktop"/>
