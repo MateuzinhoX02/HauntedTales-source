@@ -1,11 +1,19 @@
 // Eu só escrevi isso pra esse mod K
 import sys.net.Address;
 import LoadingState;
-import flixel.*;
 import openfl.utils.Assets as OpenFlAssets;
 import flixel.math.FlxMath;
+import flixel.FlxG;
+import flixel.FlxSprite;
+import flixel.FlxState;
+import flixel.text.FlxText;
+import flixel.util.FlxColor;
+import flixel.effects.FlxFlicker;
+import lime.app.Application;
+import flixel.addons.transition.FlxTransitionableState;
+import flixel.tweens.FlxTween;
+import flixel.util.FlxTimer;
 
-using StringTools;
 
 //Caching falso (por enquanto)
 class Caching extends MusicBeatState 
