@@ -13,7 +13,9 @@ import lime.app.Application;
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxTimer;
-
+#if desktop
+import Discord.DiscordClient;
+#end
 
 //Caching falso (por enquanto)
 class Caching extends MusicBeatState 
@@ -54,7 +56,6 @@ override public function create() {
 
     new FlxTimer().start(1, function(tmr:FlxTimer)
 	{
-		txtDisp.text("Done!");
 		end();
 	});
 
