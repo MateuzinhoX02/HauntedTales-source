@@ -1474,20 +1474,6 @@ class PlayState extends MusicBeatState
 		char.y += char.positionArray[1];
 	}
 
-	function startVideo(yourvideo:String) //Sistema simplificado.
-	{
-		if(ClientPrefs.cutscenesMode == "MP4 player") 
-		{
-			doMP4cut(yourvideo);
-		} else if (ClientPrefs.cutscenesMode == "WEBM player") {
-			doWEBMcut(yourvideo, 1);
-		} else if (ClientPrefs.cutscenesMode == "Optimized Cutscenes") {
-			doWEBMcut(yourvideo, 2);
-		} else if (ClientPrefs.cutscenesMode == "Disabled") {
-			startAndEnd();
-		}
-	}
-
 	function doMP4cut(yourvideo:String) 
 	{
 		var video:MP4Handler = new MP4Handler();

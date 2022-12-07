@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="microfone.png">
+<SubTexture name="microfone parado0000" x="663" y="0" width="643" height="1489" frameX="-455" frameY="-42" frameWidth="1780" frameHeight="1632" />
+<SubTexture name="microfone selecionado0000" x="0" y="0" width="663" height="1514" frameX="-447" frameY="-30" frameWidth="1780" frameHeight="1632" />
+</TextureAtlas>

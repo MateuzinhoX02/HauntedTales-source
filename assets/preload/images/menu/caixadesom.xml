@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="caixadesom.png">
+<SubTexture name="caixadesom parada0000" x="1258" y="0" width="1235" height="740" frameX="-224" frameY="-447" frameWidth="1780" frameHeight="1632" />
+<SubTexture name="caixadesom selecionada0000" x="0" y="0" width="1258" height="775" frameX="-210" frameY="-429" frameWidth="1780" frameHeight="1632" />
+</TextureAtlas>
