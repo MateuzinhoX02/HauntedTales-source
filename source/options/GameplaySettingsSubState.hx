@@ -34,6 +34,14 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 		title = 'Gameplay Settings';
 		rpcTitle = 'Gameplay Settings Menu'; //for Discord Rich Presence
 
+		var option:Option = new Option('Cutscenes Mode:',
+		"Uma opção especial para problemas de performance.",
+		'cutscenesMode',
+		'string',
+		'MP4 player',
+		['MP4 player', 'WEBM player', 'Optimized Cutscenes', 'Disabled']);
+		addOption(option);
+
 		var option:Option = new Option('Controller Mode',
 			'Check this if you want to play with\na controller instead of using your Keyboard.',
 			'controllerMode',
