@@ -25,7 +25,7 @@ class Caching extends MusicBeatState
 	"Texto sus" :
 	"Amogus"); // Coloquem certas frases aqui.
     var txtDisp:FlxText; // Uma display
-    var txtBackg:FlxSprite;
+
 
 override public function create() {
         
@@ -36,13 +36,6 @@ override public function create() {
     spr = new FlxSprite().loadGraphic(Paths.image("loads"));
     spr.screenCenter();
 
-    txtBackg.makeGraphic(1, 1, 0xFF000000);
-    txtBackg.updateHitbox();
-    txtBackg.origin.set();
-    txtBackg.scale.set(1280, txtDisp.height + 5);
-    txtBackg.alpha = 0.8;
-    txtBackg.y = txtDisp.y;
-
     txtDisp = new FlxText(40, 40, 1180, tip, 32);
 	txtDisp.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER);
 	txtDisp.setBorderStyle(OUTLINE, FlxColor.BLACK, 1.5);
@@ -51,7 +44,6 @@ override public function create() {
 
 
     add(spr);
-    add(txtBackg);
 	add(txtDisp);
 
     new FlxTimer().start(1, function(tmr:FlxTimer)
