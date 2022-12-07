@@ -12,7 +12,7 @@ import openfl.events.Event;
 import openfl.display.StageScaleMode;
 
 //crash handler stuff
-#if CRASH_HANDLER
+#if (CRASH_HANDLER && !html5)
 import lime.app.Application;
 import openfl.events.UncaughtErrorEvent;
 import haxe.CallStack;
@@ -22,6 +22,8 @@ import sys.FileSystem;
 import sys.io.File;
 import sys.io.Process;
 #end
+
+
 
 using StringTools;
 
@@ -127,7 +129,7 @@ class Main extends Sprite
 
 	// Code was entirely made by sqirra-rng for their fnf engine named "Izzy Engine", big props to them!!!
 	// very cool person for real they don't get enough credit for their work
-	#if CRASH_HANDLER
+	#if (CRASH_HANDLER && !html5) 
 	function onCrash(e:UncaughtErrorEvent):Void
 	{
 		var errMsg:String = "";
