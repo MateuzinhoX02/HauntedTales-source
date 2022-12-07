@@ -68,7 +68,6 @@ class MainMenuState extends MusicBeatState
 		persistentUpdate = persistentDraw = true;
 
 		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menu/bgLegal'));
-		bg.setGraphicSize(Std.int(FlxG.height, FlxG.width));
 		bg.updateHitbox();
 		bg.screenCenter();
 		bg.antialiasing = ClientPrefs.globalAntialiasing;
@@ -83,7 +82,7 @@ class MainMenuState extends MusicBeatState
 		caixa.frames = Paths.getSparrowAtlas('menu/caixadesom');
 		caixa.screenCenter();
 		caixa.y = prateleira.y - 5;
-		caixa.x = praleteira.x - 25;
+		caixa.x = prateteira.x - 25;
 		caixa.animation.addByPrefix('parada', "parada", 24);
 		caixa.animation.addByPrefix('selecionada', "selecionada", 24);
 		caixa.animation.play('idle');

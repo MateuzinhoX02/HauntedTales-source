@@ -12,7 +12,7 @@ import openfl.events.Event;
 import openfl.display.StageScaleMode;
 
 //crash handler stuff
-#if (CRASH_HANDLER && !html5)
+#if CRASH_HANDLER
 import lime.app.Application;
 import openfl.events.UncaughtErrorEvent;
 import haxe.CallStack;
