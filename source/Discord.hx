@@ -1,6 +1,8 @@
 package;
 
+#if !html5
 import Sys.sleep;
+
 import discord_rpc.DiscordRpc;
 
 #if LUA_ALLOWED
@@ -100,3 +102,4 @@ class DiscordClient
 	}
 	#end
 }
+#end
